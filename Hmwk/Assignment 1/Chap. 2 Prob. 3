@@ -1,0 +1,24 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 7, 2018, 1:03 AM
+ * Purpose: To calculate total sales tax on a purpose.
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double purchase = 95;
+    double stateTax = purchase * .04;
+    double countyTax = purchase * .02;
+    double finalCost = stateTax + countyTax;
+    
+    cout << "The final price of the purchase is $" << finalCost << endl;
+    
+    
+    return 0;
+}
+
