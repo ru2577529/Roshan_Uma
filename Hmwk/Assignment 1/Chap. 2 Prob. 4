@@ -1,0 +1,26 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created On January 7, 2018, 12:53 AM
+ * Purpose: To compute tax and tip on a restaurant bill for a patron.
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double mealCharge = 88.67;
+    double tax = mealCharge * .0675;
+    double tip = (mealCharge + tax) * .20;
+    double totalBill = mealCharge + tax + tip;
+    
+    cout << "Meal Charge: " << mealCharge << endl;
+    cout << "Tax Added: " << tax << endl;
+    cout << "Tip Needed: " << tip << endl;
+    cout << "Total Bill: " << totalBill << endl;
+    
+    return 0;
+}
+
