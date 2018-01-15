@@ -1,0 +1,18 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 7, 2018, 1:56 AM
+ * Purpose: Display Personal Information
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    cout << "Name: Roshan Uma\n" << "Address: 10068 Glenbrook Street Riverside CA 92503\n" << "Phone: 209-596-3963\n" << "Major: Digital Media" << endl;
+    
+    return 0;
+}
+
