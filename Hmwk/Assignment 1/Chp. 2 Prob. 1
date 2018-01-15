@@ -1,0 +1,25 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 6, 2018, 11:46 PM
+ * Purpose: Store integers between 50 and 100, stores sum of these two in variable named total.
+ */
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+    
+    int A = 50;
+    int B = 100;
+    int Total; 
+    Total = A + B;
+    
+    
+    cout << "Total =" << Total << endl;
+    
+    return 0;
+}
+
