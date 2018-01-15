@@ -1,0 +1,38 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 10, 2018, 11:37 AM
+ * Purpose: To calculate a theater's gross and net box office profit for a night.
+ */
+// Gaddis_8th Edition_Chapter 3_Problem 7
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    string movieName;
+    double ticketsAdult;
+    double ticketsChild;
+    double boxGross;
+    double boxNet;
+    double paidDist;
+    
+    cout << "Enter movie name, Adult tickets sold, and Child tickets sold separated by spaces. ";
+    cout << "Do NOT Space the movie Title! ";
+    cin >> movieName >> ticketsAdult >> ticketsChild;
+   
+    boxGross = (10.00 * ticketsAdult) + (6.00 * ticketsChild);
+    boxNet = boxGross * .20;
+    paidDist = boxGross - boxNet;
+    cout.precision(2);
+    
+    cout <<  "Movie Name: " << movieName << endl;
+    cout << fixed << "Adult Tickets Sold: " << ticketsAdult << endl;
+    cout <<  fixed << "Child Tickets Sold: " << ticketsChild << endl;
+    cout << fixed << "Gross Box Office Profit: " << boxGross << endl;
+    cout << fixed << "Net Box Office Profit: " << boxNet << endl;
+    cout << fixed << "Amount Paid to Distributor: " << paidDist << endl;
+    
+    return 0;
+}
+
