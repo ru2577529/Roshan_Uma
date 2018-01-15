@@ -1,0 +1,21 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 7, 2018, 1:45 AM
+ * Purpose: To calculate acres within a set square footage.
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double oneAcre = 43560;
+    double manyAcre = 391876 / oneAcre;
+    
+    cout << "There are " << manyAcre << " acres in 391,876 feet" << endl;
+    
+    return 0;
+}
+
