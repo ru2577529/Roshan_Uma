@@ -1,0 +1,25 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 9, 2018, 8:04 PM
+ * Purpose: Calculates Miles per Gallon by inputed information from user.
+ */
+// Gaddis_8th Edition_Chapter 3_Problem 1
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    int capacity, distance, mpg;
+    
+    cout << "This program will calculate your Miles per Gallon." << endl;
+    cout << "What is the capacity of your car in gallons?    ";
+    cin >> capacity;
+    cout << "What is the total distance you traveled in miles?    ";
+    cin >> distance;
+    mpg = distance / capacity;
+    cout << "Your Miles Per Gallon is  " << mpg << endl;
+    
+    return 0;
+}
+
