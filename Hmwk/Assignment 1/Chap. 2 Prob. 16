@@ -1,0 +1,21 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 7, 2018, 2:03 AM
+ * Created on January 7, 2018, 2:03 AM
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+        cout << "   *\n";
+	cout << "  ***\n";
+	cout << " *****\n";
+	cout << "*******\n";
+        
+    return 0;
+}
+
