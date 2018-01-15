@@ -1,0 +1,34 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 11, 2018, 3:36 PM
+ * Purpose: To calculate the percentage of males and females in a class.
+ */
+// Gaddis_8th Edition_Chapter 3_Problem 5
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double maleCount;
+    double femaleCount;
+    double classTotal;
+    double malePercent;
+    double femalePercent;
+    
+    cout << "How many males are in the class?  ";
+    cin >> maleCount;
+    cout << "How many females are in the class?  ";
+    cin >> femaleCount;
+    
+    classTotal = maleCount + femaleCount;
+    malePercent = (maleCount / classTotal) * 100;
+    femalePercent = (femaleCount / classTotal) * 100;
+    cout.precision(2);
+    
+    cout << fixed << "The male percentage in the class is " << malePercent << " percent." << endl;
+    cout << fixed << "The female percentage in the class is " << femalePercent << " percent." << endl;
+    
+    return 0;
+}
+
