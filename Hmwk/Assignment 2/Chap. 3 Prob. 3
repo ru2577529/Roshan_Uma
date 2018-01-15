@@ -1,0 +1,37 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 9, 2018, 10:15 PM
+ * Purpose: To calculate the average of five tests
+ */
+// Gaddis_8th Edition_Chapter 3_Problem 3
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double testA;
+    double testB;
+    double testC;
+    double testD;
+    double testE;
+    double testAverage;
+    cout.precision(1);
+    
+    cout << "Input first test score:  ";
+    cin >> testA;
+    cout << "Input second test score:   ";
+    cin >> testB;
+    cout << "Input third test score:   ";
+    cin >> testC;
+    cout << "Input fourth test score:   ";
+    cin >> testD;
+    cout << "Input fifth test score:   ";
+    cin >> testE;
+    
+    testAverage = (testA + testB + testC + testD + testE) / 5;
+    cout << fixed << "The average test score is   " << testAverage << endl;
+    
+    return 0;
+}
+
