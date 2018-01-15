@@ -1,0 +1,39 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 9, 2018, 9:15 PM
+ * Purpose: To calculate the income generated from ticket sales.
+ */
+// Gaddis_8th Edition_Chapter 3_Problem 2
+#include <iostream> 
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double classA;
+    double classB;
+    double classC;
+    double costA;
+    double costB;
+    double costC;
+    double totalMoney;
+    cout.precision(2);
+    
+    cout << "Number of seats sold for Class A:  ";
+    cin >> classA;
+    costA = classA * 15.00;
+    
+    cout << "Number of seats sold for Class B:   ";
+    cin >> classB;
+    costB = classB * 12.00;
+    cout << "Number of seats sold for Class C:   ";
+    cin >> classC;
+    costC = classC * 9.00;
+    
+    totalMoney = costA + costB + costC;
+    cout << fixed << "Revenue generated from sales: $   " << totalMoney << endl;
+    
+    return 0;
+}
+
