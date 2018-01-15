@@ -1,0 +1,39 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 9, 2018, 10:47 PM
+ * Purpose: Calculate average rainfall over 3 months.
+ */
+// Gaddis_8th Edition_Chapter 3_Problem 4
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    string monthOne; 
+    string monthTwo; 
+    string monthThree;
+    double rainOne; 
+    double rainTwo; 
+    double rainThree;
+    double averageRain;
+    
+    cout << "Enter the first Month and Rainfall in inches ";
+    cout << "Separated by a space.\n";
+    cin >> monthOne >> rainOne;
+    
+    cout << "Enter the second Month and Rainfall in inches ";
+    cout << "Separated by a space.\n";
+    cin >> monthTwo >> rainTwo;
+    
+    cout << "Enter the third Month and Rainfall in inches ";
+    cout << "Separated by a space.\n";
+    cin >> monthThree >> rainThree;
+            
+    averageRain = (rainOne + rainTwo + rainThree) / 3;
+    cout << "The average rainfall for " << monthOne << ", " << monthTwo << ", and ";
+    cout << monthThree << " is " << averageRain << " inches.";
+    
+    return 0;
+}
+
