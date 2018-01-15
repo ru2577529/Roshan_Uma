@@ -1,0 +1,33 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 10, 2018, 11:13 AM
+ * Purpose: To give measurements on ingredients for cookies.
+ */
+// Gaddis_8th Edition_Chapter 3_Problem 6
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double sugar;
+    double butter;
+    double flour;
+    double cookiesTotal;
+    
+    cout << "How many cookies would you like to make? ";
+    cin >> cookiesTotal;
+    
+    sugar = (1.5 / 48) * cookiesTotal;
+    butter = (1.0 / 48) * cookiesTotal;
+    flour = (2.75 / 48) * cookiesTotal;
+    cout.precision(2);
+    
+    cout << "This is the amount of ingredients you will be needing: " << endl;
+    cout << "Sugar: " << sugar << " cups." << endl;
+    cout << fixed << "Butter: " << butter << " cups." << endl;
+    cout << "Flour: " << flour << " cups." << endl;
+    
+    return 0;
+}
+
