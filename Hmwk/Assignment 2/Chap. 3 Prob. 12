@@ -1,0 +1,27 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 10, 2018, 10:47 PM
+ * Purpose: Convert Celsius to Fahrenheit
+ */
+// Gaddis_8th Edition_Chapter 3_Problem 12
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double tempCelsius;
+    double tempFahrenheit;
+    double tempFinal;
+    
+    cout << "Enter temperature in Celsius:  ";
+    cin >> tempCelsius;
+    
+    tempFahrenheit = (tempCelsius * 9) / 5;
+    tempFinal = tempFahrenheit + 32;
+    
+    cout << "The temperature is " << tempFinal << " F." << endl;
+    
+    return 0;
+}
+
