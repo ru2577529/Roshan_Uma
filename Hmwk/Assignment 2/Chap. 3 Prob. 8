@@ -1,0 +1,30 @@
+// file: main.cpp
+// name: Roshan Uma
+// Date: January 11, 2018
+// Purpose: Determine amount of widgets on a pallet.
+// Gaddis_8th Edition_Chapter 3_Problem 8
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+  double widgetAmount;
+  double widgetWeight;
+  double palletWeight;
+  double widgetPallet;
+  
+  cout << "Enter weight of pallet without widgets:   ";
+  cin >> palletWeight;
+  cout << "Enter weight of pallet with widgets:   ";
+  cin >> widgetPallet;
+  
+  widgetWeight = widgetPallet - palletWeight;
+  widgetAmount = widgetWeight / 12.5;
+  
+  cout << "The amount of widgets on the pallet is " << widgetAmount << endl;
+  
+  return 0;
+}
+
