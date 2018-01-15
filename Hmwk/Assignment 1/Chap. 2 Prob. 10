@@ -1,0 +1,22 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 7, 2018, 1:39 AM
+ * Purpose: Calculate Miles per Gallon
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double carGallons = 15;
+    double carRange = 375;
+    double mpG = carRange / carGallons;
+    
+    cout << "The car gets " << mpG << "MPG." << endl;
+    
+    return 0;
+}
+
