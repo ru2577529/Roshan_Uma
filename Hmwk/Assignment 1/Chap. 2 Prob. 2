@@ -1,0 +1,30 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 7, 2018, 12:20 AM
+ * Purpose: Determine how many sales the East Cost division will make
+ */
+
+#include <iostream>
+
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+
+double companyTotal;
+double eastCoast;
+double eastFinal;
+    
+            eastCoast = 0.56;
+            companyTotal = 8600000;
+            eastFinal = eastCoast * companyTotal;
+            
+            cout << "The East Coast Division will make $" << eastFinal << endl; 
+    
+    return 0;
+    
+}
+
