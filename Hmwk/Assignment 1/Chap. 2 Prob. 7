@@ -1,0 +1,27 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 7, 2018, 1:25 AM
+ * Purpose: To display the ocean levels at certain times.
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double currentLevel = 5000; // I am just making a mock number for the calculations.
+    double oceanIncrease = 1.5;
+    double afterFive = (oceanIncrease * 5) + currentLevel;
+    double afterSeven = (oceanIncrease * 7) + currentLevel;
+    double afterTen = (oceanIncrease * 10) + currentLevel;
+    
+    cout << "The Current Water Level is " << currentLevel << " feet" << endl;
+    cout << "After Five Years: " << afterFive << " feet" << endl;
+    cout << "After Seven Years: " << afterSeven << " feet" << endl;
+    cout << "After Ten Years: " << afterTen << " feet" << endl;
+    
+    return 0;
+}
+
