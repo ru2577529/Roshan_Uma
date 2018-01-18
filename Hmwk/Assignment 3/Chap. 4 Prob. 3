@@ -1,0 +1,32 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 16, 2018, 12:43 PM
+ * Purpose: To tell if the date is magic or not.
+ * Gaddis_8th Edition_Chapter 4_Problem 3
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    int userMonth;
+    int userDay;
+    int userYear;
+    
+    cout << "What is the month number?  ";
+    cin >> userMonth;
+    cout << "What is the day?   ";
+    cin >> userDay;
+    cout << "What is the 2-digit year?    ";
+    cin >> userYear;
+    
+    if (userDay * userMonth == userYear) 
+        cout << "The date is magical! Yay!" <<  endl;
+    else 
+        cout << "The date is not magical! Sad!" << endl;
+        
+    return 0;
+}
+
