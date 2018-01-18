@@ -1,0 +1,42 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 17, 2018, 3:20 PM
+ * Purpose: To create a time calculator.
+ * Gaddis_8th Edition_Chapter 4_Problem 7
+ */
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    double userSeconds;
+    double userMinutes;
+    double userHours;
+    double userDays;
+    
+
+    cout << "How many seconds?  ";
+    cin >> userSeconds;
+    cout.precision(2);
+    
+    userMinutes = userSeconds / 60;
+    userHours = userSeconds / 3600;
+    userDays = userSeconds / 86400;
+    
+    
+    if (userSeconds < 60)
+        cout << fixed << userSeconds << " seconds.\n";
+    else if (userSeconds >= 60 && userSeconds < 3600)
+        cout << fixed << userMinutes << " minutes.\n";
+    else if (userSeconds >= 3600 && userSeconds < 86400)
+        cout << fixed << userHours << " hours.\n";
+    else if (userSeconds >= 86400)
+        cout << fixed << userDays << " days.\n";
+    
+    return 0;
+}
+
