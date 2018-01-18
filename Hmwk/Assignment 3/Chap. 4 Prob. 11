@@ -1,0 +1,49 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 17, 2018, 4:13 PM
+ * Purpose: To assist tutoring a student in math with addition.
+ */
+// Gaddis_8th Edition_Chapter 4_Problem 11
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(int argc, char** argv) {
+    
+    // Constants
+    const int MIN_VALUE = 1;
+    const int MAX_VALUE = 999;
+    
+    // Variables
+    int numberOne;
+    int numberTwo;
+    int numberGuess;
+    int numberAnswer;
+    
+    // System Time
+    unsigned seed = time(0);
+    
+    srand(seed);
+    
+    cout << "Add the two following numbers together..." << endl;
+    numberOne = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
+    numberTwo = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
+    cout << numberOne << endl;
+    cout << numberTwo << endl;
+    
+    cout << "Please enter what you think is the answer: " << endl;
+    cin >> numberGuess;
+  
+    numberAnswer = numberOne + numberTwo;
+    
+    if (numberGuess == numberAnswer)
+        cout << "Congratulations, you got it right!" << endl;
+    else if (numberGuess != numberAnswer)
+        cout << "The answer is: " << numberAnswer << endl;
+    
+    return 0;
+}
+
