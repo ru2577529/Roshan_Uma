@@ -1,0 +1,40 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 17, 2018, 2:46 PM
+ * Purpose: To identify which color is made.
+ * Gaddis_8th Edition_Chapter 4_Problem 8
+ */
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    string color1, color2;
+    
+    
+    cout << "Please choose two primary colors (lower case).\n";
+    
+    cout << "Enter first color:  ";
+    cin >> color1;
+    cout << "Enter second color:   ";
+    cin >> color2;
+    
+    if (color1 == "red" && color2 == "blue")
+        cout << "When you mix red and blue, you get Purple" << endl;
+    else if (color1 == "blue" && color2 == "red")
+        cout << "When you mix red and blue, you get Purple" << endl;
+    else if (color1 == "red" && color2 == "yellow")
+        cout << "When you mix red and yellow, you get Orange" << endl;
+    else if (color1 == "yellow" && color2 == "red")
+        cout << "When you mix red and yellow, you get Orange" << endl;
+    else if (color1 == "blue" && color2 == "yellow")
+        cout << "When you mix blue and yellow, you get Green" << endl;
+    else if (color1 == "yellow" && color2 == "blue")
+        cout << "When you mix blue and yellow, you get Green" << endl;
+    else cout << "You did not enter two primary colors." << endl;
+}
+
