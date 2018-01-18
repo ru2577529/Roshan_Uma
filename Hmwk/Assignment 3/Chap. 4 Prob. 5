@@ -1,0 +1,37 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 17, 2018, 1:34 PM
+ * Purpose: To determine your BMI.
+ * Gaddis_8th Edition_Chapter 4_Problem 5
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double bodyWeight;
+    double bodyHeight;
+    double bodyBmi; 
+    
+    cout << "Please enter your weight in pounds:   ";
+    cin >> bodyWeight;
+    cout << "Please enter your height in inches:   ";
+    cin >> bodyHeight;
+    
+    bodyBmi = bodyWeight * (703 / (bodyHeight * bodyHeight));
+    cout << bodyBmi << endl;
+    
+    if (bodyBmi > 18.5 && bodyBmi < 25)
+        cout << "Your Body Mass Index is normal.\n";
+    
+    else if (bodyBmi < 18.5)
+        cout << "You are underweight!\n";
+    
+    else if (bodyBmi > 25)
+        cout << "You are overweight!\n";
+                
+    return 0;
+}
+
