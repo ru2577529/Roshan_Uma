@@ -1,0 +1,41 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 17, 2018, 3:10 PM
+ * Purpose: To determine which area of a rectangle is larger.
+ * Gaddis_8th Edition_Chapter 4_Problem 4
+ */
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int oneWidth;
+    int oneLength;
+    int twoWidth;
+    int twoLength;
+    int oneArea;
+    int twoArea;
+    
+    cout << "What is the width and length of the first rectangle?       ";
+    cin >> oneWidth >> oneLength;
+    cout << "What is the width and length of the second rectangle?       ";
+    cin >> twoWidth >> twoLength;
+    
+    oneArea = (2 * oneWidth) * (2 * oneLength);
+    twoArea = (2 * twoWidth) * (2 * twoLength);
+    
+    if (oneArea > twoArea)
+        cout << "The first rectangle is larger than the second.\n";
+    else if (twoArea > oneArea)
+        cout << "The second rectangle is larger than the first.\n";
+    else if (oneArea == twoArea)
+        cout << "The rectangles have the same area.\n";
+    
+    
+    return 0;
+}
+
