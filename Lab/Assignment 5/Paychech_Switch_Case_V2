@@ -1,0 +1,40 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 18, 2018, 3:11 PM
+ * Purpose: To calculate weekly paychecks.
+ */
+
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+    
+    int payRate;
+    short hrsWkd;
+    int payChck;
+    
+    cout << "Enter how many hours you worked this week (There are only 168 hours in a week): ";
+    cin >> hrsWkd;
+    cout << "Enter your rate of pay per hour:  ";
+    cin >> payRate;
+    
+    switch(hrsWkd<=0||hrsWkd>168){
+        case true:cout << "Invalid amount of hours."<<endl;break;
+        default:{
+            switch(hrsWkd>1&&hrsWkd<=40) {
+                case true:payChck = hrsWkd * payRate;break;
+                default: {
+                    switch(hrsWkd>40) {
+                        case true:payChck = (40 * payRate) + (2 * ((hrsWkd - 40) * payRate));break;
+                }
+        }
+    }
+   
+}
+    }
+    cout << "Your paycheck is: $  " << payChck << endl;
+    return 0;
+}
