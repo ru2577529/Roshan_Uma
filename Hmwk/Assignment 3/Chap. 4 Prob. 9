@@ -1,0 +1,41 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 17, 2018, 3:59 PM
+ * Purpose: To count coins and determine if it is one dollar.
+ * Gaddis_8th Edition_Chapter 4_Problem 9
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    
+    int costPennies;
+    int costNickels;
+    int costDimes;
+    int costQuarters;
+    double costTotal;
+    
+    cout << "Please enter the number of Pennies: " << endl;
+    cin >> costPennies;
+    cout << "Please enter the number of Nickels: " << endl;
+    cin >> costNickels;
+    cout << "Please enter the number of Dimes: " << endl;
+    cin >> costDimes;
+    cout << "Please enter the number of Quarters: " << endl;
+    cin >> costQuarters;
+    
+    costTotal = (.01 * costPennies) + (.05 * costNickels) + (.10 * costDimes) + (.25 * costQuarters);
+    
+    if (costTotal == 1.00)
+        cout << "Congratulations! You won the Change for a Dollar Game!" << endl;
+    else if (costTotal < 1.00)
+        cout << "The amount you entered is less than One Dollar." << endl;
+    else if (costTotal > 1.00)
+        cout << "The amount you entered is more than One Dollar." << endl;
+    
+    return 0;
+}
+
