@@ -1,0 +1,27 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 16, 2018, 11:34 AM
+ * Purpose: To distinguish between which number is larger than the other.
+ * Gaddis_8th Edition_Chapter 4_Problem 1
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    int a;
+    int b;
+    
+    cout << "Please enter your first number.  ";
+    cin >> a;
+    cout << "Please enter your second number.   ";
+    cin >> b;
+    
+    a > b ? cout << a << " is greater than " << b : cout << b << " is greater than " << a;
+    
+    return 0;
+}
+
