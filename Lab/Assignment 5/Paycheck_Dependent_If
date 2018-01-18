@@ -1,0 +1,35 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 18, 2018, 2:41 PM
+ * Purpose: To calculate weekly paychecks.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    int payRate;
+    int hrsWkd;
+    int payChck;
+    
+    cout << "Enter how many hours you worked this week: ";
+    cin >> hrsWkd;
+    cout << "Enter your rate of pay per hour:  ";
+    cin >> payRate;
+    
+    if (hrsWkd <= 0)
+        cout << "Please enter the correct number of hours worked." << endl;
+    else if(hrsWkd <= 40) {
+        payChck = hrsWkd * payRate;
+        cout << "Your paycheck is: $  " << payChck << endl; }
+    else {
+        payChck = (40 * payRate) + (2 * ((hrsWkd - 40) * payRate));
+        cout << "Your paycheck is: $ " << payChck << " including your overtime.\n";
+    }
+        
+    
+    return 0;
+}
+
