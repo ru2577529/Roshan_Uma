@@ -1,0 +1,31 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 17, 2018, 2:03 PM
+ * Purpose: To calculate weight in Newtons and determine if overweight or underweight.
+ * Gaddis_8th Edition_Chapter 4_Problem 6
+ */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    double userMass;
+    double userWeight;
+    
+    cout << "What is the mass of the object in Newtons?  ";
+    cin >> userMass;
+    
+    userWeight = userMass * 9.8;
+    cout << userWeight << " netwons." << endl;
+    if (userWeight > 1000)
+        cout << "The object is too heavy! My arms!!" << endl;
+    else if (userWeight < 10)
+        cout << "The object is too light! Weakkkk!" << endl;
+    else if (userWeight > 10 && userWeight < 1000)
+        cout << "The object is the correct weight! Yay!" << endl;
+    
+    return 0;
+}
+
