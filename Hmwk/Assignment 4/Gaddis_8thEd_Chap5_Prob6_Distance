@@ -1,0 +1,42 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 21, 2018, 11:07 PM
+ * Purpose: to calculate distance traveled over a set number of hours.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    int distance;
+    int speed;
+    int time;
+    
+    cout << "What is the speed of the vehicle in MPH:  \n";
+    cin >> speed;
+
+    while (speed < 0){
+        cout << "Please enter a positive number for the speed.\n";
+        cin >> speed; }
+    
+    
+    cout << "How long did you travel in hours?  \n";
+    cin >> time;
+    
+    while (time < 0) {
+        cout << "Please enter a positive number for the distance.\n";
+        cin >> time; }
+    
+    cout << "This program will show the distance you have traveled.\n";
+    cout << "Hour\tDistance\n";
+    cout << "------------------\n";
+
+    for (int num = 0; num <= time; num++) {
+        distance = num * speed;
+        cout << num << "\t" << distance << endl;
+    }
+    return 0;
+}
+
