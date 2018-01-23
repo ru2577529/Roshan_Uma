@@ -1,0 +1,39 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 21, 2018, 11:55 PM
+ * Purpose: To calculate pay over time.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    double pay = 1.0;
+    int days;
+    double Final = 0.0;
+    
+    cout << "Please enter the amount of days you wish to be paid:  ";
+    cin >> days;
+    
+    while (days < 0) {
+        cout << "Please enter a positive number for days:  ";
+        cin >> days;   
+    }
+    
+    cout << "Day\tPay in Pennies\n";
+    cout << "-----------------------\n";
+    
+    for (int num = 1; num <= days; num++) {
+        cout << num << "\t" << pay / 1001 << endl;
+        pay = pay * 2;
+    }
+
+    Final += pay;
+    cout.precision(2);
+    cout << fixed << "Total Pay: $ " << Final / 100 << endl;
+    
+    return 0;
+}
+
