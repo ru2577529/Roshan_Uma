@@ -1,0 +1,30 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 21, 2018, 12:06 AM
+ * Purpose: Calculate increasing membership fees.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    const int MIN_VALUE = 1;
+    const int MAX_VALUE = 6; 
+    double memFee = 2500;
+    double percInc = .04;
+    
+    cout << "This will show the projected prices of membership over 6 years.\n";
+    cout << "Year\t\tPrice\n";
+    cout << "----------------\n";
+    
+    for (int num = MIN_VALUE; num <= MAX_VALUE; num++) 
+    {
+        memFee = memFee + (memFee * percInc);
+        cout << num << "\t\t" << memFee << endl;
+    }
+      
+    return 0;
+}
+
