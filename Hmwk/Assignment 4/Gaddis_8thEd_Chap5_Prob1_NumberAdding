@@ -1,0 +1,31 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 20, 2018, 1:55 PM
+ * Purpose: To add numbers up to the inputed number.
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    int num = 0;
+    int sum = 0;
+    
+    cout << "Input a positive integer: " << endl;
+    cin >> num;
+    
+    while (num < 0) {
+        cout << "Please enter a positive integer.\n";
+        cin >> num;
+    }
+    for (int i = 1; i <= num; i++) {
+        sum += i;
+    }
+    cout << "Total sum is " << sum << endl;
+            
+            return 0;
+} 
+
