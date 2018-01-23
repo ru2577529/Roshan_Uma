@@ -1,0 +1,27 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 20, 2018, 11:51 PM
+ * Purpose: To calculate calories burned.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    const int MIN_VALUE = 5;
+    const int MAX_VALUE = 30;
+    const int INCREMENT = 5;
+    double calOries = 3.5;
+    
+    cout << "This will show how many calories are burned over time! Super Cool!\n";
+    cout << "Minutes\t\tCalories\n";
+    cout << "------------------------\n";
+    cout.precision(2);
+    
+    for (int num = MIN_VALUE; num <= MAX_VALUE; num += INCREMENT)
+        cout << fixed << num << "\t\t" << (num * calOries) << endl;
+    return 0;
+}
+
