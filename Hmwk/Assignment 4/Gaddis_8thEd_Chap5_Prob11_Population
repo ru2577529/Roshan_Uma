@@ -1,0 +1,54 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 22, 2018, 12:25 PM
+ * Purpose: To predict the growth of a population.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    int organisms = 0;
+    double popIncr = 0.0;
+    int days = 0;
+    
+    // Input for Organisms
+    cout << "Please enter the amount of organisms that will start:  ";
+    cin >> organisms;   
+    if (organisms <= 1) {
+        cout << "Please enter a number of 2 or greater:  ";
+        cin >> organisms;;
+    }
+    
+    // Input for Population Increase
+    cout << "Please enter the percent of population increase:  ";
+    cin >> popIncr;    
+    if (popIncr <= 0) {
+        cout << "Please enter a positive number:  ";
+        cin >> popIncr;
+    }
+    
+    // Input for number of days
+    cout << "Please enter the number of days:  ";
+    cin >> days;
+    if (days < 1) {
+        cout << "Please enter a number of 1 or greater:  ";
+        cin >> days;
+    }
+    
+    // Title for the program
+    cout << "This will track the growth of a population.\n";
+    cout << "Day\tPopulation Size\n";
+    cout << "-----------------------" << endl;
+    
+    //Initialize the loop
+    for (int num = 1; num <= days; num++) {
+        cout << num << "\t" << organisms << endl;
+        organisms = (organisms * (popIncr / 100)) + organisms;
+    }
+    
+    ;return 0;
+}
+
