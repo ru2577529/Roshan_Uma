@@ -1,0 +1,29 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 20, 2018, 10:25 PM
+ * Purpose: To list all the characters associated with ASCII.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    const int CODES = 127;
+    const int CHARS = 16;
+    char character;
+    
+    cout << "This will show all the ASCII Characters:\n";
+    
+    for (int code = 0; code <= CODES; code++) {
+        character = code;
+    
+        if (code % CHARS == 0) 
+        {
+            cout << character << endl;
+        }
+        else cout << character;
+    }
+    return 0;
+}
