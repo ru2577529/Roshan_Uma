@@ -1,0 +1,31 @@
+/* 
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 22, 2018, 2:09 PM
+ * Created on January 22, 2018, 2:09 PM
+ */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    // Initialize the Variables
+    double tempF = 0.0;
+    double tempC = 20.0;
+    
+    // Title
+    cout << "This program will show temperature conversions\n";
+    cout << "Celsius\tFahrenheit\n";
+    cout << "---------------------\n";
+    
+    // Initialize the loop
+    for (int num = 0; num <= tempC; num++) {
+        tempF = (num * 9)/5 + 32;
+        cout.precision(1);
+        cout << fixed << num << "\t" << tempF << endl;
+    }
+    
+    return 0;
+}
+
