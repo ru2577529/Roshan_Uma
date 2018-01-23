@@ -1,39 +1,44 @@
 /* 
  * File:   main.cpp
  * Author: Roshan Uma
- * Created on January 21, 2018, 11:55 PM
- * Purpose: To calculate pay over time.
+ * Created on January 22, 2018, 9:44 AM
+ * Purpose: To calculate the amount of rooms booked at a hotel.
  */
 
 #include <iostream>
 using namespace std;
 
-int main(int argc, char** argv) {
+int main() {
 
-    double pay = 1.0;
-    int days;
-    double Final = 0.0;
-    
-    cout << "Please enter the amount of days you wish to be paid:  ";
-    cin >> days;
-    
-    while (days < 0) {
-        cout << "Please enter a positive number for days:  ";
-        cin >> days;   
-    }
-    
-    cout << "Day\tPay in Pennies\n";
-    cout << "-----------------------\n";
-    
-    for (int num = 1; num <= days; num++) {
-        cout << num << "\t" << pay / 1001 << endl;
-        pay = pay * 2;
-    }
+int floors;
+int rooms;
+double totalRooms = 0.0;
+double totalBooked = 0.0;
+int booked; 
+double percBooked = 0.0;
 
-    Final += pay;
-    cout.precision(2);
-    cout << fixed << "Total Pay: $ " << Final / 100 << endl;
-    
-    return 0;
+cout << "How many floors does the hotel have?   ";
+cin >> floors;
+while (floors < 1) {
+  cout << "Floors must be greater than 1, please enter again: ";
+  cin >> floors;
 }
 
+for (int num = 1; num <= floors; num++) {
+  if (num != 13) {
+  cout << "Enter the amount of rooms for floor " << num << ":";
+  cin >> rooms;
+  cout << "How many rooms on this floor are booked?  ";
+  cin >> booked;
+  totalRooms += rooms;
+  totalBooked += booked;
+}
+}
+cout << "There are " << totalRooms << " rooms.\n";
+cout << totalBooked << " rooms booked.\n";
+percBooked = totalBooked / totalRooms;
+cout.precision(2);
+cout << fixed << percBooked * 100 << " % of rooms are booked.\n";
+  
+  return 0;
+}
