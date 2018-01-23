@@ -1,0 +1,285 @@
+/*
+ * File:   main.cpp
+ * Author: Roshan Uma
+ * Created on January 22, 2018, 5:21 PM
+ * Purpose: To show all problems from assignment four.
+ */
+
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    // Declare Variables
+    int probNum;
+    
+    do {
+        cout << "Problem 1 -> Gaddis_8thEd_Chap5_Prob1_NumberAdding" << endl;
+        cout << "Problem 2 -> Gaddis_8thEd_Chap5_Prob2_ASCII" << endl;
+        cout << "Problem 3 -> Gaddis_8thEd_Chap5_Prob3_OceanLevels" << endl;
+        cout << "Problem 4 -> Gaddis_8thEd_Chap5_Prob4_Calories" << endl;
+        cout << "Problem 5 -> Gaddis_8thEd_Chap5_Prob5_MembershipFee" << endl;
+        cout << "Problem 6 -> Gaddis_8thEd_Chap5_Prob6_Distance" << endl;
+        cout << "Problem 7 -> Gaddis_8thEd_Chap5_Prob7_Pennies" << endl;
+        cout << "Problem 8 -> Gaddis_8thEd_Chap5_Prob9_HotelRooms" << endl;
+        cout << "Problem 9 -> Gaddis_8thEd_Chap5_Prob11_Population" << endl;
+        cout << "Problem 10 -> Gaddis_8thEd_Chap5_Prob12_Temperature" << endl;
+        cout << "Type 1 to 10 only.\n";
+        cin >> probNum;
+    
+    switch(probNum) {
+        
+    // Number Adding Program
+    case 1: {
+    int num = 0;
+    int sum = 0;
+    
+    cout << "Input a positive integer: " << endl;
+    cin >> num;
+    while (num < 0) {
+        cout << "Please enter a positive integer.\n";
+        cin >> num;
+    }
+    for (int i = 1; i <= num; i++) {
+        sum += i;
+    }
+    cout << "Total sum is " << sum << endl;      
+    break;     
+    }
+    
+    // ASCII Program
+    case 2: {
+    const int CODES = 127;
+    const int CHARS = 16;
+    char character;
+    cout << "This will show all the ASCII Characters:\n";   
+    for (int code = 0; code <= CODES; code++) {
+        character = code;
+        if (code % CHARS == 0) 
+        {
+        cout << character << endl;
+        }
+        else cout << character;
+    }    
+    break;
+    }
+    
+    // Ocean Levels Program    
+    case 3: {
+    const int MIN_NUMBER = 1;
+    const int MAX_NUMBER = 25;
+    double waterLevel = 1.5;
+    
+    cout << "This shows the rising water levels over 25 years.\n";
+    cout << "Year\t\tWater Level\n";
+    cout << "---------------------\n";
+    
+    for (int num = MIN_NUMBER; num <= MAX_NUMBER; num++)
+        cout << num << "\t\t" << (num * waterLevel) << endl;
+    break;
+        }
+    
+    // Calories Program
+    case 4: {
+    const int MIN_VALUE = 5;
+    const int MAX_VALUE = 30;
+    const int INCREMENT = 5;
+    double calOries = 3.5;
+    
+    cout << "This will show how many calories are burned over time! Super Cool!\n";
+    cout << "Minutes\t\tCalories\n";
+    cout << "------------------------\n";
+    cout.precision(2);
+    
+    for (int num = MIN_VALUE; num <= MAX_VALUE; num += INCREMENT)
+        cout << fixed << num << "\t\t" << (num * calOries) << endl;
+    break;
+    }
+    
+    // Membership Fee Program
+    case 5: {
+      const int MIN_VALUE = 1;
+    const int MAX_VALUE = 6; 
+    double memFee = 2500;
+    double percInc = .04;
+    
+    cout << "This will show the projected prices of membership over 6 years.\n";
+    cout << "Year\t\tPrice\n";
+    cout << "----------------\n";
+    
+    for (int num = MIN_VALUE; num <= MAX_VALUE; num++) 
+    {
+        memFee = memFee + (memFee * percInc);
+        cout << num << "\t\t" << memFee << endl;
+    }
+      
+    break;
+    }
+    
+    // Distance Program
+    case 6: {
+      int distance;
+    int speed;
+    int time;
+    
+    cout << "What is the speed of the vehicle in MPH:  \n";
+    cin >> speed;
+
+    while (speed < 0){
+        cout << "Please enter a positive number for the speed.\n";
+        cin >> speed; }
+    
+    
+    cout << "How long did you travel in hours?  \n";
+    cin >> time;
+    
+    while (time < 0) {
+        cout << "Please enter a positive number for the distance.\n";
+        cin >> time; }
+    
+    cout << "This program will show the distance you have traveled.\n";
+    cout << "Hour\tDistance\n";
+    cout << "------------------\n";
+
+    for (int num = 0; num <= time; num++) {
+        distance = num * speed;
+        cout << num << "\t" << distance << endl;
+    }
+    break;
+    }
+    
+    //Pennies for Pay Program
+    case 7: {
+      double pay = 1.0;
+    int days;
+    double Final = 0.0;
+    
+    cout << "Please enter the amount of days you wish to be paid:  ";
+    cin >> days;
+    
+    while (days < 0) {
+        cout << "Please enter a positive number for days:  ";
+        cin >> days;   
+    }
+    
+    cout << "Day\tPay in Pennies\n";
+    cout << "-----------------------\n";
+    
+    for (int num = 1; num <= days; num++) {
+        cout << num << "\t" << pay / 1001 << endl;
+        pay = pay * 2;
+    }
+
+    Final += pay;
+    cout.precision(2);
+    cout << fixed << "Total Pay: $ " << Final / 100 << endl;
+    }
+    
+    // Hotel Rooms Program
+    case 8: {
+      int floors;
+      int rooms;
+      double totalRooms = 0.0;
+      double totalBooked = 0.0;
+      int booked; 
+      double percBooked = 0.0;
+
+    cout << "How many floors does the hotel have?   ";
+    cin >> floors;
+    while (floors < 1) {
+      cout << "Floors must be greater than 1, please enter again: ";
+      cin >> floors;
+    }
+
+    for (int num = 1; num <= floors; num++) {
+  if (num != 13) {
+  cout << "Enter the amount of rooms for floor " << num << ":";
+  cin >> rooms;
+  cout << "How many rooms on this floor are booked?  ";
+  cin >> booked;
+  totalRooms += rooms;
+  totalBooked += booked;
+}
+}
+    cout << "There are " << totalRooms << " rooms.\n";
+    cout << totalBooked << " rooms booked.\n";
+    percBooked = totalBooked / totalRooms;
+    cout.precision(2);
+    cout << fixed << percBooked * 100 << " % of rooms are booked.\n";
+    }
+    
+    // Population Prediction Program
+    case 9: {
+    int organisms = 0;
+    double popIncr = 0.0;
+    int days = 0;
+    
+    // Input for Organisms
+    cout << "Please enter the amount of organisms that will start:  ";
+    cin >> organisms;   
+    if (organisms <= 1) {
+        cout << "Please enter a number of 2 or greater:  ";
+        cin >> organisms;;
+    }
+    
+    // Input for Population Increase
+    cout << "Please enter the percent of population increase:  ";
+    cin >> popIncr;    
+    if (popIncr <= 0) {
+        cout << "Please enter a positive number:  ";
+        cin >> popIncr;
+    }
+    
+    // Input for number of days
+    cout << "Please enter the number of days:  ";
+    cin >> days;
+    if (days < 1) {
+        cout << "Please enter a number of 1 or greater:  ";
+        cin >> days;
+    }
+    
+    // Title for the program
+    cout << "This will track the growth of a population.\n";
+    cout << "Day\tPopulation Size\n";
+    cout << "-----------------------" << endl;
+    
+    //Initialize the loop
+    for (int num = 1; num <= days; num++) {
+        cout << num << "\t" << organisms << endl;
+        organisms = (organisms * (popIncr / 100)) + organisms;
+    }
+    
+    ;break;
+}    
+    
+  // Temperature Program
+  
+  case 10: {
+    // Initialize the Variables
+    double tempF = 0.0;
+    double tempC = 20.0;
+    
+    // Title
+    cout << "This program will show temperature conversions\n";
+    cout << "Celsius\tFahrenheit\n";
+    cout << "---------------------\n";
+    
+    // Initialize the loop
+    for (int num = 0; num <= tempC; num++) {
+        tempF = (num * 9)/5 + 32;
+        cout.precision(1);
+        cout << fixed << num << "\t" << tempF << endl;
+    }
+    
+    break;
+  }
+    
+    }
+    
+    return 0;
+    
+    }while(probNum>=1&&probNum<=10); }
+  
