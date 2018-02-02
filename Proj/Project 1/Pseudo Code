@@ -1,0 +1,101 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+//System Libraries
+//Input Output library
+//Random numbers
+//Time to set the Seed
+//File stream library
+//Format Library
+//Namespace std of system libraries
+
+// main
+    // Game Introduction
+    // User Input name and trait
+    
+    // User Input r or l
+      // if r, continue
+      // if l, game over
+    
+    // 3 Doors Game, User inputs b, p, or g,
+      // b, subract 10 from userHP
+      // p, continue
+      // g, game over
+    
+    // Merchant challenge, input y or n
+      // y, merchant output file with hint, subtract 10 from userHP
+      // x, continue
+    
+    // User input r or l
+      // input r
+          // User input f or t
+            // f, subtract 10 from userHP
+            // t, subtract 3 over 3 decisions
+      // input l, continue
+      
+    // Battle the Sheepdog -> Looping Sheepdog HP with attacks
+      // Initialize dog statistics and player statistics
+        // For statment loop Dog HP > 0 ++
+          // random number generator 1-5 = dogAtk
+          // User Input A or H
+          // if a, dogHP - 5
+          // if h, userHP + 3
+          // userHP - dogAtk
+    
+    // User input r or l;
+      // input r, +10 userHP
+      // input l, +5 userHP
+      
+    // User input s or l;
+      // if s, userHP - 5;
+      // if l, continue;
+      
+    // Battle the Siren -> Looping Siren HP with attacks
+      // intialize siren statistics and player statistics
+        // For statement loop Siren HP > 0 += 2
+          // random number generator 1-7 = sirenAtk
+          // User input A or H
+          // if a, sirenHP - 8
+          // if h, userHP + 3
+          // userHP - sirenAtk
+          
+    // User input l, r, s
+      // if l, input r, l
+        // if r, +10 HP
+        // if l, continue
+      // if r, input r, l
+        // if r, contine 
+        // if l, +5 HP 
+      // if s, continue
+    
+    // InnKeeper challenge
+      // if merchant challenge = y, continue
+      // if merchan challenge = n, +20 HP
+    
+    // Chest
+      // output find potion!
+      // userHP + 15 HP
+      // output finding healing tome
+      
+    // Final Boss Fight -> Looping Boss HP with attacks
+      // Initialize Boss statistics and player statistics
+        // For statement loop Boss HP > 0 += 3
+        // While bossHP > 60
+          // random number generator 1-10 = bossAtk
+          // User input A or H
+          // if a, bossAtk - 8
+          // random number generator 1-3 = x
+          // if h, userHP = pow (6,x)
+          // userHP - bossAtk
+        // While bossHP < 60
+          // random number generator 1-10 = bossAtk
+          // User input A or H
+          // if a, bossAtk - 8
+          // random number generator 1-3 = x
+          // if h, userHP = pow (6,x)
+          // userHP - bossAtk * 2
+          
+return 0;
+}
